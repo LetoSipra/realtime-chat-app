@@ -10,6 +10,6 @@
 
 @layer components {
   .iconAnimation {
-    @apply cursor-pointer rounded-full transition duration-300 ease-out hover:bg-[#8696a0] hover:bg-opacity-30 hover:shadow-sm hover:shadow-white;
+    @apply cursor-pointer rounded-full transition duration-300 ease-out hover:bg-[#8696a0] hover:bg-opacity-30;
   }
 }

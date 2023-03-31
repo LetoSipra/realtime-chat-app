@@ -3,7 +3,7 @@ import {
   HiPaperClip,
   HiPaperAirplane,
 } from "react-icons/hi2";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "@/firebase";
 import { useSession } from "next-auth/react";
@@ -41,7 +41,7 @@ function Input() {
 
   return (
     <>
-      <main className="relative mb-2 max-h-[44px] mx-2">
+      <main className="relative mx-2 mb-2 max-h-[44px]">
         <section className="flex rounded-xl bg-[#202c33] p-2">
           <div className="mx-1 my-auto flex space-x-1 px-0.5 py-0.5">
             <HiOutlineFaceSmile
@@ -59,7 +59,7 @@ function Input() {
               </div>
             )}
           </div>
-          <div className="w-full flex rounded-md bg-[#2a3942] space-x-2">
+          <div className="flex w-full space-x-2 rounded-md bg-[#2a3942]">
             <input
               type="text"
               placeholder="Write a messeage"
@@ -70,7 +70,7 @@ function Input() {
                 setInput(e.target.value);
               }}
             />
-            <p className="px-1 my-auto">{input.length}/250</p>
+            <p className="my-auto px-1">{input.length}/250</p>
           </div>
           <div className="mx-1 my-auto">
             <HiPaperAirplane

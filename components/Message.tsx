@@ -42,14 +42,10 @@ function Messeage({ message, id }: Props) {
               {message.timestamp?.toDate()}
             </Moment>
             {session?.user.uid === message?.id && (
-              <div
-                className="group flex cursor-pointer"
-                onClick={() => deleteDoc(doc(db, "messages", id))}>
-                <HiOutlineTrash className="my-auto text-red-600 group-hover:text-red-500" />
-                <p className="hover:underline group-hover:text-red-500">
-                  Delete
-                </p>
-              </div>
+              <HiOutlineTrash
+                className="iconAnimation my-auto h-4 w-4 cursor-pointer text-red-600 hover:bg-red-600 hover:bg-opacity-30"
+                onClick={() => deleteDoc(doc(db, "messages", id))}
+              />
             )}
           </div>
         </div>
