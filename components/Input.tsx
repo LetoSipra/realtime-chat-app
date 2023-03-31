@@ -41,7 +41,7 @@ function Input() {
 
   return (
     <>
-      <main className="relative mb-2 max-h-[44px]">
+      <main className="relative mb-2 max-h-[44px] mx-2">
         <section className="flex rounded-xl bg-[#202c33] p-2">
           <div className="mx-1 my-auto flex space-x-1 px-0.5 py-0.5">
             <HiOutlineFaceSmile
@@ -59,16 +59,18 @@ function Input() {
               </div>
             )}
           </div>
-          <div className="w-full">
+          <div className="w-full flex rounded-md bg-[#2a3942] space-x-2">
             <input
               type="text"
+              placeholder="Write a messeage"
               maxLength={250}
-              className="w-full rounded-md bg-[#2a3942] px-2 py-0.5 outline-none"
+              className="w-full bg-[#2a3942] px-2 py-0.5 outline-none"
               value={input}
               onChange={(e) => {
                 setInput(e.target.value);
               }}
             />
+            <p className="px-1 my-auto">{input.length}/250</p>
           </div>
           <div className="mx-1 my-auto">
             <HiPaperAirplane

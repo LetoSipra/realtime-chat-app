@@ -34,7 +34,7 @@ function Messeage({ message, id }: Props) {
             session?.user.uid === message.id && "items-end"
           }`}>
           <p>@{message.username}</p>
-          <p className="w-fit max-w-xs overflow-auto break-words rounded-lg bg-green-500 px-2.5 py-0.5 text-white">
+          <p className="w-fit max-w-xs overflow-auto break-words rounded-lg bg-[#005c4b] px-2.5 py-0.5 text-white">
             {message.text}
           </p>
           <div className="mt-1 flex space-x-2 text-xs">
