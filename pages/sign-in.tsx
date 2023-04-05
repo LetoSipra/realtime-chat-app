@@ -12,7 +12,7 @@ const SignInPage = () => {
       window.close();
       router.push("/");
     }
-    if (!session) void signIn();
+    if (!session) void signIn("google");
   }, [session]);
 
   return null;
