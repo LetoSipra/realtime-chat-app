@@ -4,16 +4,10 @@ import Input from "@/components/Input";
 import Head from "next/head";
 import { getProviders, getSession, useSession } from "next-auth/react";
 import { DocumentContext } from "next/document";
-import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 export default function Home() {
   const { data: session } = useSession();
-  const router = useRouter();
-
-  if (!session) {
-    return <Header />;
-  }
 
   return (
     <>
