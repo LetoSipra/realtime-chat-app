@@ -7,10 +7,11 @@ export const authOptions = {
     GoogleProvider({
       clientId: process.env.GOOGLE_WEB_CLIENT_ID,
       clientSecret: process.env.GOOGLE_WEB_CLIENT_SECRET,
+      secret: process.env.NEXTAUTH_SECRET,
     }),
-    // ...add more providers here
   ],
   callbacks: {
+    secret: process.env.NEXTAUTH_SECRET,
     async session({ session, token }) {
       session.user.uid = token.sub;
       return session;
