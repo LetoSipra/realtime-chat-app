@@ -2,9 +2,15 @@ import { useSession, signOut } from "next-auth/react";
 import Image from "next/image";
 import { HiOutlineUserCircle, HiGlobeAlt } from "react-icons/hi2";
 import { HiOutlineLogout } from "react-icons/hi";
+import { useRouter } from "next/router";
 
 function Header() {
   const { data: session } = useSession();
+  const router = useRouter();
+
+  if (session) {
+    router.push("/");
+  }
 
   const popupCenter = (url: string, title: string) => {
     const dualScreenLeft = window.screenLeft ?? window.screenX;
