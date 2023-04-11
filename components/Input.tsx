@@ -92,6 +92,7 @@ function Input() {
             {session ? (
               <input
                 ref={inputRef}
+                disabled={loading ? true : false}
                 type="text"
                 placeholder="Write a messeage"
                 maxLength={250}
