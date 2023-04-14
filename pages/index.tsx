@@ -3,8 +3,6 @@ import Header from "@/components/Header";
 import Input from "@/components/Input";
 import Head from "next/head";
 import { getProviders, getSession, useSession } from "next-auth/react";
-import { DocumentContext } from "next/document";
-import { useRouter } from "next/router";
 
 export default function Home() {
   const { data: session } = useSession();
@@ -25,7 +23,7 @@ export default function Home() {
   );
 }
 
-export async function getServerSideProps(context: DocumentContext) {
+export async function getServerSideProps(context: any) {
   const providers = await getProviders();
   const session = await getSession(context);
 
