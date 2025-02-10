@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0b141a];
+  }
+}
+
+@layer components {
+  .iconAnimation {
+    @apply cursor-pointer rounded-full transition duration-300 ease-out hover:bg-[#8696a0] hover:bg-opacity-30;
+  }
+}
